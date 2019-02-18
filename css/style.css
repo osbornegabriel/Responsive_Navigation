@@ -167,5 +167,26 @@ nav a:hover {
 
   nav a {
     opacity: 1;
+    position: relative;
+  }
+
+  nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    background: black;
+    position: absolute;
+    top: -.75em;
+    /* ^^^ Change 'top' to 'bottom' to place line underneath*/
+    left: 0;
+    right: 0;
+    transform: scale(0,1);
+    /*transform-origin: left;*/
+    /* use transform origin ^^^  to change origin motion of appearing line*/
+    transition: transform ease-in-out 250ms;
+  }
+
+  nav a:hover::before {
+    transform: scale(1,1);
   }
 }
