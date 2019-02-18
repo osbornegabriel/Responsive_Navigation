@@ -44,6 +44,10 @@ header {
   /* write here to style logo */
 }
 
+.nav-toggle {
+  display: none;
+}
+
 nav {
   position: absolute;
   text-align: left;
@@ -51,6 +55,7 @@ nav {
   left: 0;
   background: var(--background);
   width: 100%;
+  display: none
 }
 
 nav ul {
@@ -73,4 +78,12 @@ nav a {
 
 nav a:hover {
   color: #000;
+}
+
+.nav-toggle:checked ~ nav {
+  display: block;
+}
+
+.nav-toggle-label:hover {
+  cursor: pointer;
 }
